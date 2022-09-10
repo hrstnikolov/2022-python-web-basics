@@ -1,0 +1,31 @@
+body {
+    background: #F0F1F5;
+    margin: 0;
+    font-family: "Helvetica", sans-serif;
+    padding: 1rem 12rem;
+}
+
+body > section {
+    padding-top: 12rem;
+    text-align: center;
+}
+
+header > p {
+    float: left;   
+    color: #F9690E;
+}
+
+nav {
+    text-align: right;
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0 8px;
+}
+
+nav ul li a {
+    color: #F9690E;
+    text-decoration: none;
+}
