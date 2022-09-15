@@ -1,0 +1,35 @@
+body {
+    font-family: Quicksand;
+    margin: 0;
+}
+
+nav {
+    background: #234465;
+
+}
+
+nav ul {
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover{
+    background: #e33c2f;
+    color: slateblue;
+    cursor: pointer;
+}
+nav ul li a {
+    color: bisque;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+section {
+    padding: 0 40px;
+
+}
