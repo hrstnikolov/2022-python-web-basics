@@ -1,22 +1,59 @@
+html {
+    font-family: "Helvetica", sans-serif;
+}
 
+body {
+    margin: 0 auto;
+    max-width: 1300px;
+}
 
-nav ul{
+nav {
+    background: #eff0f4;
+}
+
+nav i {
+    font-size: 30px;
+}
+
+nav ul {
     text-align: center;
+    margin: 0 100px;
+    padding: 10px 0;
+    height: 100px;
+    align-content: center;
 }
 
 nav ul li {
     display: inline-block;
+    border: solid white;
+    border-width: 0 3px;
+    width: 200px;
+    padding: 20px 0;
+    text-space: 10px;
 }
+
 
 nav ul li a {
     text-decoration: none;
     color: #00d3d4;
+    line-height: 2rem;
 }
 
-main section article {
+
+.left-resume {
+    background: #555c6f;
+    color: #b2b6c0;
+    width: 49%;
+    display: inline-block;
+
+}
+
+.right-resume {
+    width: 49%;
+    background: #00d3d4;
     display: inline-block;
 }
 
-main section article:first-child{
-    background: #00d3d4;
+.right-resume article{
+    display: inline-block;
 }
