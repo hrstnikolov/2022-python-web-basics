@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>All tasks</title>
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Mechanical</a></li>
+            <li><a href="#">Electrical</a></li>
+            <li><a href="#">Programming</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <ul>
+                {% for t in tasks %}
+                    <li>
+                        <h2>{{ t.id }}) {{ t.name }}</h2>
+                        <p> {{ t.description }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
