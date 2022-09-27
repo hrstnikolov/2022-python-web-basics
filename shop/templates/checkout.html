@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<main>
+    <section>
+        <article>
+            {% if basket %}
+                <p>You have {{ basket|length }} in total: {{ basket|join:", " }}</p>
+                <p>Your bill: {{ bill|floatformat:"-2" }}</p>
+                {% if bill > 50 %}
+                    <p><strong>Yeah! You get free shipment! </strong></p>
+                {% else %}
+                    Reach 50 lv to get free shipment!
+                {% endif %}
+            {% else %}
+                <p>Your basket is empty.</p>
+            {% endif %}
+
+        </article>
+    </section>
+</main>
+</body>
+</html>

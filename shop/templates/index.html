@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="{% url 'redirect to home' %}">Home</a></li>
+        <li><a href="{% url 'contacts' %}">Contacts</a></li>
+        <li><a href="{% url 'about' %}">About us</a></li>
+        <li><a href="{% url 'articles' %}">Articles</a></li>
+        <li><a href="{% url 'checkout' %}">Checkout</a></li>
+    </ul>
+</nav>
+<main>
+    <h1>Welcome, back {{ user|default:"Guest" }}</h1>
+
+    <p>Current time is {{ current_time|date:"Y-m-d H:i:s" }}</p>
+
+    {% url "show_articles" 1 as third_article %}
+    {% if third_article %}
+        <p>There is a <a href="{% url "about" %}"> third article!.</a></p>
+    {% endif %}
+</main>
+</body>
+</html>

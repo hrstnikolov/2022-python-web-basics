@@ -1,0 +1,14 @@
+body {
+    font-family: Quicksand, sans-serif;
+    color: gray;
+    background: blanchedalmond;
+}
+
+h1 {
+    color: slateblue;
+}
+
+nav {
+    display: inline;
+    text-decoration: None;
+}

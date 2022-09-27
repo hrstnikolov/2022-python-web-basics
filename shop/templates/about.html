@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{#     Wrong way to load `static files`#}
+{#        <link rel="stylesheet" href="/staticfiles/site.css">#}
+    <link rel="stylesheet" href="{% static "site.css" %}">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section>
+    <h2> {{ introduction|linebreaks }} </h2>
+    <p> I, {{ name.first }} {{ name.last }}, can help you find the perfect shirt! </p>
+    <p> For any questions, please contact me on {{ email_address }} </p>
+    <p> Shirts available in the following
+        {# number of available sizes #}
+        {{ shirt_sizes.get_available_shirt_sizes|length }}
+        size{{ shirt_sizes.get_available_shirt_sizes|pluralize }}:
+        {# list of sizes #}
+        {{ shirt_sizes.get_available_shirt_sizes|join:", " }}</p>
+</section>
+</body>
+</html>
