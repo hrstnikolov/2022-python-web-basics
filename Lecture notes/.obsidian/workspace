@@ -7,12 +7,8 @@
         "id": "8bf21a0a0554838e",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "06 Workshop 1.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -61,7 +57,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 199.5
   },
   "right": {
     "id": "9375770b158aa703",
@@ -77,9 +73,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "06 Workshop 1.md",
-                "collapseAll": false,
-                "extraContext": false,
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -94,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "06 Workshop 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -116,18 +110,20 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "06 Workshop 1.md"
-              }
+              "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 236.40000915527344
   },
-  "active": "8bf21a0a0554838e",
-  "lastOpenFiles": []
+  "active": "8c5d7e2928f83233",
+  "lastOpenFiles": [
+    "07 Models 1.md",
+    "06 Workshop 1.md",
+    "05 Templates.md"
+  ]
 }
