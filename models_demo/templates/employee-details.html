@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+    Details - {{ employee.first_name }}
+{% endblock %}
+
+{% block content %}
+    <ul>
+        <li> Name: {{ employee.first_name }}</li>
+        <li> City: {{ employee.city }}</li>
+        <li> Years of experience: {{ employee.years_of_experience }}</li>
+    </ul>
+    <br>
+    <h2><a href="{% url 'show employees' %}">Back to all employees</a></h2>
+{% endblock %}

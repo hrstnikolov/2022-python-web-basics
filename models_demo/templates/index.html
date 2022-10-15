@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <div style="display: flex">
+        <div>
+            <ul>
+                {% for employee in employees %}
+                    <li>
+                        <div>
+                            {{ employee.name_and_age }}
+                        </div>
+                        <div>
+                            Department: {{ employee.department.name }}
+
+                            <a href="{% url 'delete employee' pk=employee.pk %}">Delete</a>
+
+                            Days in the company: {{ employee.time_in_the_company }}
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div>
+            <ul>
+                {% for employee2 in employees2 %}
+                    <li>
+                        <div>
+                            {{ employee2.name_and_age }}
+                        </div>
+                        <div>
+                            Department: {{ employee2.department.name }}
+                        </div>
+                        {#                    Manager: {{ employee2.manager.first_name }} salary: {{ employee2.manager.salary }}#}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    <div>
+        {{ first_project }}
+    </div>
+
+    </div>
+{% endblock %}

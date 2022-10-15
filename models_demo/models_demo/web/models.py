@@ -1,4 +1,7 @@
+import datetime
+
 from django.db import models
+from django.urls import reverse
 
 
 class Department(models.Model):
@@ -56,14 +59,20 @@ class Employee(models.Model):
     city = models.CharField(max_length=40, null=True, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return f'Id: {self.pk}, {self.name_and_age}'
+
+    @property
+    def time_in_the_company(self):
+        return datetime.date.today() - self.created_on.date()
 
     @property
     def name_and_age(self):
         return f'{self.first_name}, {self.age}'
 
-    def __str__(self):
-        return f'Id: {self.pk}, {self.name_and_age}'
-
+    def get_absolute_url(self):
+        url = reverse('employee details', kwargs={'pk':self.pk})
+        return url
 
 class Project(models.Model):
     name = models.CharField(max_length=100)
@@ -76,3 +85,5 @@ class AccessCard(models.Model):
         on_delete=models.CASCADE,
         primary_key=True,
     )
+
+    card_type = models.CharField(max_length=30, null=True, blank=True)

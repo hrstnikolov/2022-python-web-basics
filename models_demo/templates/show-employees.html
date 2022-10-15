@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <h1>List of all employees:</h1>
+
+    <table>
+        {% for employee in employees %}
+            <tr>
+                <td>
+{#                    <a href="{% url 'employee details' employee.pk %}">{{ employee.name_and_age }}</a>#}
+                    <a href="{{ employee.get_absolute_url }}">{{ employee.name_and_age }}</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
