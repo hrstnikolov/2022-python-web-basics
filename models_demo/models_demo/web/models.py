@@ -2,13 +2,16 @@ import datetime
 
 from django.db import models
 from django.urls import reverse
+from models_demo.web.validators import validate_after_today
 
 
 class Department(models.Model):
     name = models.CharField(max_length=30)
+    slug = models.SlugField(null=True, unique=True)
 
     def __str__(self):
         return f'{self.name}'
+
 
 
 class Manager(models.Model):
@@ -77,6 +80,7 @@ class Employee(models.Model):
 class Project(models.Model):
     name = models.CharField(max_length=100)
     employee = models.ManyToManyField(to=Employee)
+    end_date = models.DateField(blank=True, null=True, validators=(validate_after_today,))
 
 
 class AccessCard(models.Model):
