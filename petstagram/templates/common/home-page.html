@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block page_content %}
-
     <div class="container">
         <div class="col-9">
 
@@ -19,7 +18,7 @@
             {% for photo in photos %}
 
                 <!-- Start Pet Photo Post -->
-                {% include 'common/partials/pet-post.html' %}
+                {% include 'common/../partials/pet-post.html' with photo=photo%}
                 <!-- End Pet Photo Post -->
 
             {% endfor %}

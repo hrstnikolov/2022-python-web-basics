@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <form action="{% url 'update employee' pk=1 %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>ПРАЩАЙ!</button>
+    </form>
+
+{% endblock %}

@@ -42,7 +42,7 @@
 
 
     <!-- Start Pet Photo -->
-    <div class="imgBx" id="photo-{{ photo.pk }}}">
+    <div class="imgBx" id="photo-{{ photo.pk }}">
         <img src="https://static.scientificamerican.com/sciam/cache/file/766BFBD4-F8A1-4B7D-8416A370010B5A88_source.jpg"
              alt="post" class="cover">
     </div>
@@ -59,11 +59,11 @@
                 <span class="heart">
 
                         <!-- Link to Like Path -->
-						<a href="{% url 'like' photo_id=photo.id %}">
+						<a href="{% url 'like photo' photo_id=photo.id %}">
 
                             <!-- IF user has liked the photo -->
                             {% if photo.is_liked_by_user %}
-                                <svg style="color: red"
+                                <svg style="color: red"  
                                      xmlns="http://www.w3.org/2000/svg"
                                      width="24"
                                      height="24"
@@ -109,7 +109,7 @@
 
                 <!-- Start Share Button -->
                 <!-- Link to Share Path -->
-                <a href="#">
+                <a href="{% url 'share photo' photo.id %}">
                     <svg aria-label="Share Post" class="_8-yf5 " color="#262626" fill="#262626"
                          height="24" role="img" viewBox="0 0 48 48" width="24">
                         <path d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3
@@ -131,18 +131,11 @@
         <p class="likes"> {{ photo.likes_count }} likes</p>
 
         <!-- Start Tagged Pets -->
-        {% for pet in photo.tagged_pets.all %}
-            <!-- Link to Tagged Pet Details Page-->
-            <a href="{% url 'display pet' username='dummy_username' pet_slug=pet.slug %}">
-                <p class="message">
-                    <b>{{ pet.name }}</b>
-                </p>
-            </a>
-        {% endfor %}
+        {% include 'partials/tagged_pets_on_photo.html' %}
         <!-- End Tagged Pets -->
 
         <!-- Link to Photo Details Page -->
-        <a href="{% url 'display photo' photo.pk %}">
+        <a href="{% url 'display photo' photo_pk=photo.pk %}">
             <h4 class="details">See details</h4>
         </a>
 
